@@ -17,6 +17,12 @@
 		D93775552A3CB62A00667A75 /* test_uikitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93775542A3CB62A00667A75 /* test_uikitTests.swift */; };
 		D937755F2A3CB62A00667A75 /* test_uikitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D937755E2A3CB62A00667A75 /* test_uikitUITests.swift */; };
 		D93775612A3CB62A00667A75 /* test_uikitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93775602A3CB62A00667A75 /* test_uikitUITestsLaunchTests.swift */; };
+		D937756E2A3CB67F00667A75 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D937756D2A3CB67F00667A75 /* TableViewController.swift */; };
+		D93775732A3CB74E00667A75 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93775722A3CB74E00667A75 /* TableViewCell.swift */; };
+		D93775762A3CB78E00667A75 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93775752A3CB78E00667A75 /* ItemModel.swift */; };
+		D93775792A3CBB1200667A75 /* UIKit+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93775782A3CBB1200667A75 /* UIKit+Utils.swift */; };
+		D937757C2A3CBB9900667A75 /* ImageTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D937757B2A3CBB9900667A75 /* ImageTaskManager.swift */; };
+		D937757E2A3CC3BA00667A75 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D937757D2A3CC3BA00667A75 /* SectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		D937755A2A3CB62A00667A75 /* test-uikitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "test-uikitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D937755E2A3CB62A00667A75 /* test_uikitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_uikitUITests.swift; sourceTree = "<group>"; };
 		D93775602A3CB62A00667A75 /* test_uikitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_uikitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D937756D2A3CB67F00667A75 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D93775722A3CB74E00667A75 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D93775752A3CB78E00667A75 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		D93775782A3CBB1200667A75 /* UIKit+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Utils.swift"; sourceTree = "<group>"; };
+		D937757B2A3CBB9900667A75 /* ImageTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTaskManager.swift; sourceTree = "<group>"; };
+		D937757D2A3CC3BA00667A75 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +113,12 @@
 		D93775392A3CB62900667A75 /* test-uikit */ = {
 			isa = PBXGroup;
 			children = (
-				D937753A2A3CB62900667A75 /* AppDelegate.swift */,
-				D937753C2A3CB62900667A75 /* SceneDelegate.swift */,
-				D937753E2A3CB62900667A75 /* ViewController.swift */,
+				D937757A2A3CBB8B00667A75 /* Utils */,
+				D93775772A3CBB0900667A75 /* Extensions */,
+				D93775742A3CB78000667A75 /* Data */,
+				D93775712A3CB74100667A75 /* Components */,
+				D93775702A3CB69200667A75 /* App */,
+				D937756F2A3CB68800667A75 /* Scenes */,
 				D93775402A3CB62900667A75 /* Main.storyboard */,
 				D93775462A3CB62A00667A75 /* Assets.xcassets */,
 				D93775482A3CB62A00667A75 /* LaunchScreen.storyboard */,
@@ -128,6 +143,57 @@
 				D93775602A3CB62A00667A75 /* test_uikitUITestsLaunchTests.swift */,
 			);
 			path = "test-uikitUITests";
+			sourceTree = "<group>";
+		};
+		D937756F2A3CB68800667A75 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D937753E2A3CB62900667A75 /* ViewController.swift */,
+				D937756D2A3CB67F00667A75 /* TableViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D93775702A3CB69200667A75 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D937753A2A3CB62900667A75 /* AppDelegate.swift */,
+				D937753C2A3CB62900667A75 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D93775712A3CB74100667A75 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D93775722A3CB74E00667A75 /* TableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D93775742A3CB78000667A75 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D93775752A3CB78E00667A75 /* ItemModel.swift */,
+				D937757D2A3CC3BA00667A75 /* SectionModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D93775772A3CBB0900667A75 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D93775782A3CBB1200667A75 /* UIKit+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D937757A2A3CBB8B00667A75 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D937757B2A3CBB9900667A75 /* ImageTaskManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +328,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D93775452A3CB62900667A75 /* test_uikit.xcdatamodeld in Sources */,
+				D937757E2A3CC3BA00667A75 /* SectionModel.swift in Sources */,
 				D937753F2A3CB62900667A75 /* ViewController.swift in Sources */,
 				D937753B2A3CB62900667A75 /* AppDelegate.swift in Sources */,
+				D937757C2A3CBB9900667A75 /* ImageTaskManager.swift in Sources */,
+				D93775732A3CB74E00667A75 /* TableViewCell.swift in Sources */,
+				D937756E2A3CB67F00667A75 /* TableViewController.swift in Sources */,
+				D93775762A3CB78E00667A75 /* ItemModel.swift in Sources */,
+				D93775792A3CBB1200667A75 /* UIKit+Utils.swift in Sources */,
 				D937753D2A3CB62900667A75 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
