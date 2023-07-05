@@ -8,22 +8,6 @@
 import UIKit
 import CoreData
 
-func saveToDoc(_ image: UIImage, name: String) {
-  guard let data = image.pngData() else { return }
-  let fm = FileManager.default
-  let url = fm.urls(for: .documentDirectory, in: .userDomainMask)[0]
-  do {
-    let fileURL = url.appending(path: "\(name).png")
-    guard !fm.fileExists(atPath: fileURL.absoluteString) else {
-      print("===>", #fileID, #function, fileURL, "existed!")
-      return
-    }
-    try data.write(to: fileURL)
-  } catch {
-    print("===>", #fileID, #function, error)
-  }
-}
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -32,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    print("===>", #fileID, #function, FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0])
     return true
   }
 

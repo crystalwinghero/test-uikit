@@ -68,9 +68,6 @@ class TableViewController: UITableViewController {
         guaranteeMainThread {
           cell.updateImage(image)
         }
-        DispatchQueue.global().async {
-          saveToDoc(image, name: "\(item.id)")
-        }
       case .failure(let failure):
         print(#function, failure)
         return
